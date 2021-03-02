@@ -1,0 +1,26 @@
+[
+    {
+        "id": "18724",
+        "name": "Partey",
+        "average": "86",
+        "type": "TOTW",
+        "minPrice": "124000",
+        "date": "20\/12\/2020 \u00e0 16:43:29"
+    },
+    {
+        "id": 20995,
+        "name": "PROMES",
+        "average": "194000",
+        "type": "UELLive",
+        "minPrice": "194000",
+        "date": "20\/12\/2020 \u00e0 16:51:00"
+    },
+    {
+        "id": "3734",
+        "name": "HAZARD",
+        "average": "86",
+        "type": "Freeze",
+        "minPrice": "207000",
+        "date": "02\/03\/2021, 11:37:18"
+    }
+]

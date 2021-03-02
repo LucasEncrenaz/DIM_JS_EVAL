@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #646464;
+}
+
+header {
+    background-color: black;
+    color: white;
+    line-height: 5vh;
+    line-height: 80px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    color: white;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 12%;
+    position: relative;
+}
+
+article p {
+    margin: 5px 0;
+}
+
+.OR {
+    background-color: #F7E18E;
+    border: 3px solid #4d331f;
+    color: #4d331f;
+}
+
+.Icone {
+    background-color: #E6E4E4;
+    border: 3px solid #ECCF88;
+    color: #ECCF88;
+}
+
+.TOTW {
+    background-color: #292929;
+    border: 3px solid #e1c775;
+    color: #e1c775;
+}
+
+.OTW {
+    background-color: #D520FE;
+    border: 3px solid #ecdd36;
+    color: #ecdd36;
+}
+
+.RulesBreaker {
+    background-color: #B6337E;
+    border: 3px solid #B2F41D;
+    color: #B2F41D;
+}
+
+.UCLLive {
+    background-color: #EA41F7;
+    border: 3px solid#88F3DD;
+    color: #88F3DD;
+}
+
+.TOTGS {
+    background-color: #000f52;
+    border: 3px solid#39d5e1;
+    color: #39d5e1;
+}
+
+.Hero {
+    background-color: #1e0433;
+    border: 3px solid #e510d8;
+    color: #e510d8;
+}
+
+.UELLive {
+    background-color: #fed502;
+    border: 3px solid #020203;
+    color: #020203;
+}
+
+.Freeze {
+    background-color: #0b0f1d;
+    border: 3px solid #adb8ca;
+    color: #adb8ca;
+}
+
+.delButton {
+    position: absolute;
+    top : -5px;
+    right: -5px;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.delButton:hover {
+    background-color: red;
+}
+
+#formDiv {
+    margin: 10px;
+    width: 30%;
+}
+
+#formDiv p {
+    margin: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#formDiv span {
+    display: block;
+    margin: 20px 0;
+}
+
+#formDiv input {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: #646464;
+}
+
+#formDiv select {
+    padding: 0;
+    font-size: 20px;
+    border: none;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: #646464;
+}
+
+#formDiv button {
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 300ms;
+}
+
+#formDiv button:hover {
+    background-color: #86F452;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.price {
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+.price:hover {
+    color: green;
+}
