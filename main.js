@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
             parametrizedUrl +=k+"="+v+"&"
         }
         return fetch(parametrizedUrl).then((response) => {
-            console.log(response)
             return response.json()
         })
     }
