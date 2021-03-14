@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     _("h1", header, "Joueurs FUT 21", header)
     let section = _("section", body)
 
-    ajax("services.php", { action: "list" }).then((players) => {
+    ajax("./services.php", { action: "list" }).then((players) => {
         players.forEach(displayPlayer)
     })
 
