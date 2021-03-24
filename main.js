@@ -1,20 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
+    fetch("fut.php?q=rarities")
+        .then(res => res.json())
+        .then(data => { 
+            console.log(data)
+        })
 
     // VARS
     const body = document.querySelector("body")
     const dateNow = new Date().toLocaleString()
     
     // FUNCTIONS
+    
+
     function addTypeCard() {
 
         const select = document.querySelector("select");
-        var types = ['OR', 'TOTW', 'RulesBreaker', 'UCLLive', 'OTW', 'Icone', 'TOTGS', 'Hero', 'UELLive', 'Freeze'];
-    
-        types.forEach((type) => {
-            var option = document.createElement("option");
-            option.text = type;
-            option.value = type;
-            select.add(option);
+
+        fetch("card.json")
+        .then(res => res.json())
+        .then(data => { 
+            data.forEach((type) => {
+                var option = document.createElement("option");
+                option.text = type.name;
+                option.value = type.name;
+                select.add(option);
+            })
         })
         
     } 
@@ -72,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function ajax(url, params) {
         
         let parametrizedUrl = url+"?";
-
+        
         for (const [k, v] of Object.entries(params)) {
             parametrizedUrl +=k+"="+v+"&"
         }
@@ -82,47 +93,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // ACTIONS
-
+    
     let header = _("header", body)
     _("h1", header, "Joueurs FUT 21", header)
-    let section = _("section", body)
-
-    ajax("services.php", { action: "list" }).then((players) => {
-        players.forEach(displayPlayer)
-    })
-
+    
     // FORMULAIRE
+    _("span", body, "Ajouter un joueur", "linkForm")
+    
     let formDiv = _("div", body, null, "formDiv")
-
+    
     let p = _("p", formDiv)
     _("span", p, "Nom")
     let nameInput = _("input", p)
-
+    
     p = _("p", formDiv)
     _("span", p, "Note")
-    let noteInput = _("input", p)
-
+    let noteInput = _("input", p, null, "inputNote")
+    jQuery('#inputNote').attr('type', 'number');
+    
     p = _("p", formDiv)
     _("span", p, "Type de carte")
     let typeInput = _("select", p)
-
+    
     p = _("p", formDiv)
     _("span", p, "Prix minimum")
-    let priceInput = _("input", p)
-
+    let priceInput = _("input", p, null, "inputPrice")
+    jQuery('#inputPrice').attr('type', 'number');
+    
     p = _("p", formDiv)
     _("span", p)
     let addButton = _("button", p, "Ajouter")
-
+    
     addButton.addEventListener("click", () => {
         ajax("services.php", { action: "add", name: nameInput.value, average: noteInput.value, type: typeInput.value, minPrice: priceInput.value, date: dateNow})
         .then((data) => {
             displayPlayer(data.object)
         }) 
     })
-
+    
     addTypeCard()
+    jQuery( "#linkForm" ).click(function() {
+        jQuery( "#formDiv" ).slideToggle();
+    });
+    let section = _("section", body)
+    
+    ajax("services.php", { action: "list" }).then((players) => {
+        players.forEach(displayPlayer)
+    })
 })
+
 
 
 // Fonction de factorisation de la création d'éléments DOM

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "OR"
+    },
+    {
+        "id": 2,
+        "name": "TOTW"
+    },
+    {
+        "id": 3,
+        "name": "RulesBreaker"
+    },
+    {
+        "id": 4,
+        "name": "UCLLive"
+    },
+    {
+        "id": 5,
+        "name": "OTW"
+    },
+    {
+        "id": 6,
+        "name": "Icon"
+    },
+    {
+        "id": 7,
+        "name": "TOTGS"
+    },
+    {
+        "id": 8,
+        "name": "Hero"
+    },
+    {
+        "id": 9,
+        "name": "UELLive"
+    },
+    {
+        "id": 10,
+        "name": "Freeze"
+    }
+]
